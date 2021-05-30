@@ -35,19 +35,24 @@ List of the routes -
 
 Here is the list routes and the description of the routes please do have a look into it -
 
+![Screenshot from 2021-05-30 21-06-14](https://user-images.githubusercontent.com/35135348/120110612-cda9bc00-c18b-11eb-8e59-7601ab7d2b7f.png)
 
 
 List of the models -
 
 1.User Model
 
+![Screenshot from 2021-05-30 21-08-20](https://user-images.githubusercontent.com/35135348/120110633-e2864f80-c18b-11eb-9bc3-caae82fd632e.png)
+
 
 2.Ticket Model
+
+![Screenshot from 2021-05-30 21-08-27](https://user-images.githubusercontent.com/35135348/120110647-f2059880-c18b-11eb-9ecf-7e269cf57df3.png)
 
 
 3.Event Model
 
-
+![Screenshot from 2021-05-30 21-08-33](https://user-images.githubusercontent.com/35135348/120110654-fe89f100-c18b-11eb-88e2-f8188be2611a.png)
 
 
 Screenshots of the working -
