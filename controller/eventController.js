@@ -26,8 +26,10 @@ exports.new = function (req, res) {
     event.prize=req.body.prize;
 // save the contact and check for errors
     event.save(function (err) {
-        // if (err)
-        //     res.json(err);
+         if (err)
+         {
+             res.json(err);
+         }    
 res.json({
             message: 'New event created!',
             data: event
@@ -75,7 +77,19 @@ exports.addUserToEvent = function (req, res) {
             tickets[i].save(function (err) {
             if (err)
             {
-                res.json(err);
+                res.json(err);    Event.get(function (err, events) {
+        if (err) {
+            res.json({
+                status: "error",
+                message: err,
+            });
+        }
+        res.json({
+            status: "success",
+            message: "All events retrieved successfully",
+            data: events
+        });
+    });
             }
             });
 
@@ -115,4 +129,81 @@ res.json({
             message: "the event has been deleted"
         });
     });
+};
+
+exports.getWinner = function (req, res) {
+    EventId= req.params.event_id;
+    console.log(EventId);
+    Event.findById(req.params.event_id, function (err, event) {
+        if (err)
+            res.send(err);
+
+    console.log(event);
+    console.log(event.winner);
+
+    if(event.users.length==0)
+    {
+        res.json(
+            {
+                message:'no user has participated'
+            }
+        )
+    }
+    else if(!(event.winner=="yet to be released"))
+    {
+       // event
+        res.json({
+                message: 'event winner was selected here he is',
+                data: event.winner
+        });
+    }
+    else
+    {
+        // save the contact and check for errors
+        userbase_size=event.users.length;
+        id=Math.floor(Math.random() * userbase_size);
+        event.winner=event.users[id];
+        event.save(function (err) {
+            if (err)
+                res.json(err);
+            res.json({
+                message: 'event winner is selected',
+                data: event
+            });
+        });
+    }
+
+    });
+
+};
+
+exports.getWinner7days = function (req, res) {
+    console.log(Event.collections);
+    Event.get(function (err, events) {
+        if (err) {
+            res.json({
+                status: "error",
+                message: err,
+            });
+        }
+        console.log(events);
+        events.sort(function(a,b){
+    return b.date -  a.date;
+    });
+        console.log(events);
+        var winner_list= [];
+        var i=0;
+        var no_of_winners= events.length > 7 ? 7 : events.length;
+        for(i=0;i<no_of_winners;i++)
+        {
+            winner_list.push({"winner_id":events[i].winner , "event_id":events[i]._id , "prize":events[i].prize, "date":events[i].date});
+        }
+        
+        res.json({
+            status: "success",
+            message: "All winners from the past seven events retrieved successfully",
+            data: winner_list
+        });
+    });
+
 };

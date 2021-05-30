@@ -40,9 +40,9 @@ router.route('/events/:event_id/:user_id')
     .post(eventController.addUserToEvent);
 router.route('/events/:event_id')    
     .delete(eventController.deleteBy_eventid);
-router.route('/tickets/:user_id/:ticket_id')
-    .get(ticketController.viewBy_useridandticket_id)
-    .put(ticketController.update)
-    .delete(ticketController.deleteBy_useridandticket_id);
+router.route('/events/:event_id/winner')
+    .get(eventController.getWinner)
+router.route('/events/winner')
+    .get(eventController.getWinner7days)
 module.exports = router;
 // Export API routes
