@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost/resthub', { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost/xyzw', { useNewUrlParser: true, useUnifiedTopology: true});
 var db = mongoose.connection;
 
 // Added check for DB connection
@@ -43,5 +43,5 @@ mongoose.modelNames().forEach(function(modelName){
 })
 
 console.log(schemas);*/
-    console.log("Running RestHub on port " + port);
+    console.log("Running Rest API on port " + port);
 });
