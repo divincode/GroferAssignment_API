@@ -1,6 +1,6 @@
 This API is built as per the assignment sheet given  -
 
-This project is built on Node.js and mongodb.
+This project is built on Node.js and mongodb,it follows MVC architecture there is api-routes file for view,model folder for the various models and controller for each model.
 
 To run this api - clone the repository 
 
