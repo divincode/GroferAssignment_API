@@ -21,8 +21,10 @@ var eventSchema = mongoose.Schema({
     }
 
 });
-// Export Contact model
+// Export Event model
 var event = module.exports = mongoose.model('event', eventSchema);
 module.exports.get = function (callback, limit) {
     event.find(callback).limit(limit);
 }
+
+//Similarly to user it also contains _id

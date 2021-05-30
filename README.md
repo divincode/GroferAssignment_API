@@ -21,9 +21,16 @@ It has all the functional requirements
 6.Has an api to get winners of the last seven events.{if there are less than seven events than it will return the latest winners} in ascending order.
 
 List of the routes -
+Here is the list routes and the description of the routes please do have a look into it -
+
 
 
 List of the models -
+1.User Model
+
+2.Ticket Model
+
+3.Event Model
 
 
 

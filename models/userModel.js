@@ -15,3 +15,5 @@ var user = module.exports = mongoose.model('user', userSchema);
 module.exports.get = function (callback, limit) {
     user.find(callback).limit(limit);
 }
+
+//this shecama also has inherent feild _id which is auto genrated ..

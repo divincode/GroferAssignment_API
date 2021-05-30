@@ -16,8 +16,10 @@ var ticketSchema = mongoose.Schema({
     }
 
 });
-// Export Contact model
+// Export ticket model
 var ticket = module.exports = mongoose.model('ticket', ticketSchema);
 module.exports.get = function (callback, limit) {
     ticket.find(callback).limit(limit);
 }
+
+//Similarly have _id

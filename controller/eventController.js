@@ -24,7 +24,7 @@ exports.new = function (req, res) {
     var event = new Event();
     event.date=req.body.date;
     event.prize=req.body.prize;
-// save the contact and check for errors
+// save the event and check for errors
     event.save(function (err) {
          if (err)
          {
@@ -77,19 +77,8 @@ exports.addUserToEvent = function (req, res) {
             tickets[i].save(function (err) {
             if (err)
             {
-                res.json(err);    Event.get(function (err, events) {
-        if (err) {
-            res.json({
-                status: "error",
-                message: err,
-            });
-        }
-        res.json({
-            status: "success",
-            message: "All events retrieved successfully",
-            data: events
-        });
-    });
+                res.json(err);    
+
             }
             });
 
@@ -159,7 +148,7 @@ exports.getWinner = function (req, res) {
     }
     else
     {
-        // save the contact and check for errors
+        
         userbase_size=event.users.length;
         id=Math.floor(Math.random() * userbase_size);
         event.winner=event.users[id];
