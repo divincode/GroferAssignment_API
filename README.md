@@ -2,7 +2,7 @@ This API is built as per the assignment sheet given  -
 
 This project is built on Node.js and mongodb.
 
-To run this api - clone the repository
+To run this api - clone the repository 
 
 run the following commands in the rerminal
 1.npm install.
@@ -11,7 +11,7 @@ run the following commands in the rerminal
 
 3.mongod in the other terminal.
 
-Ps- Provided Node and MongoDB is intalled in the system.
+Ps- Provided Node and MongoDB is intalled in the system and it run on localhost:8080
 
 The api which was asked to be created can be tested by using the PostMan Application.
 
@@ -53,6 +53,12 @@ List of the models -
 3.Event Model
 
 ![Screenshot from 2021-05-30 21-08-33](https://user-images.githubusercontent.com/35135348/120110654-fe89f100-c18b-11eb-88e2-f8188be2611a.png)
-
+ 
 
 Screenshots of the working -
+
+![Screenshot from 2021-05-30 21-21-00](https://user-images.githubusercontent.com/35135348/120111085-20847300-c18e-11eb-864c-553a2d24b798.png)
+
+![Screenshot from 2021-05-30 21-21-27](https://user-images.githubusercontent.com/35135348/120111104-398d2400-c18e-11eb-844c-688989336158.png)
+
+![Screenshot from 2021-05-30 21-21-48](https://user-images.githubusercontent.com/35135348/120111180-8ffa6280-c18e-11eb-8b57-eee78599fa44.png)
